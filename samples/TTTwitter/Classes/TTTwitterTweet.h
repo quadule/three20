@@ -20,6 +20,7 @@
   NSString* _text;
   NSString* _source;
   NSString* _avatarUrl;
+  NSString* _username;
 }
 
 @property (nonatomic, retain) NSDate*   created;
@@ -27,5 +28,6 @@
 @property (nonatomic, copy)   NSString* text;
 @property (nonatomic, copy)   NSString* source;
 @property (nonatomic, copy)   NSString* imageUrl;
+@property (nonatomic, copy)   NSString* username;
 
 @end

@@ -55,10 +55,9 @@
   NSMutableArray* items = [[NSMutableArray alloc] init];
 
   for (TTTwitterTweet* tweet in _searchFeedModel.tweets) {
-    NSString *username = @"Username";
     NSString *url = [NSString stringWithFormat:@"http://twitter.com/%@",
-                     [username stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
-    NSString *link = [NSString stringWithFormat:@"<a href='%@'>%@</a>", url, username];
+                     [tweet.username stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
+    NSString *link = [NSString stringWithFormat:@"<a href='%@'>%@</a>", url, tweet.username];
     
     TTStyledText* styledText = [TTStyledText textFromXHTML:
                                 [NSString stringWithFormat:@"<b>%@</b><br />%@", link,

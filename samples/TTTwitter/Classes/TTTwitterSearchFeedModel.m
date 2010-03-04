@@ -103,6 +103,9 @@ static NSString* kTwitterSearchFeedFormat = @"http://search.twitter.com/search.a
     NSArray *links = [[entry objectForKey:@"link"] filteredArrayUsingPredicate:imagePredicate];
     tweet.imageUrl = [[links objectAtIndex:0] objectForKey:@"href"];
     
+    NSString *name = [[[entry objectForKey:@"author"] objectForKey:@"name"] objectForXMLNode];
+    tweet.username = [[name componentsSeparatedByString:@" "] objectAtIndex:0];
+    
     [tweets addObject:tweet];
     TT_RELEASE_SAFELY(tweet);
   }
