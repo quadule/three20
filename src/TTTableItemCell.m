@@ -1212,8 +1212,19 @@ static const CGFloat kDefaultMessageImageHeight = 34;
 // TTTableViewCell class public
 
 + (CGFloat)tableView:(UITableView*)tableView rowHeightForObject:(id)object {
-	// XXXjoe Compute height based on font sizes
-	return 90;
+  TTTableStyledMessageItem* item = object;
+  CGFloat left = 0.0;
+  
+  if (item.imageURL) left += kSmallMargin + kDefaultMessageImageHeight + kSmallMargin;
+  item.text.width = tableView.frame.size.width - left - kSmallMargin;
+  
+  CGFloat height = item.text.height + kSmallMargin*2;
+  
+  if (height < TT_ROW_HEIGHT) {
+    return TT_ROW_HEIGHT;
+  } else {
+    return height;
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1277,7 +1288,7 @@ static const CGFloat kDefaultMessageImageHeight = 34;
 		left = kMargin;
 	}
 	
-	CGFloat width = self.contentView.width - left;
+	CGFloat width = self.contentView.width - left - kSmallMargin;
 	CGFloat top = kSmallMargin-3;
   
   if (_timestampLabel.text.length) {
@@ -1304,8 +1315,8 @@ static const CGFloat kDefaultMessageImageHeight = 34;
 	}
 	
 	if ([self.detailedTextLabel text] != nil) {
-		CGFloat textHeight = [[self.detailedTextLabel font] ttLineHeight] * (kMessageTextLineCount + (self.captionLabel.text.length ? 0 : 1));
-		self.detailedTextLabel.frame = CGRectMake(left, top, width, textHeight);
+		//CGFloat textHeight = [[self.detailedTextLabel font] ttLineHeight] * (kMessageTextLineCount + (self.captionLabel.text.length ? 0 : 1));
+		self.detailedTextLabel.frame = CGRectMake(left, top, width, self.detailedTextLabel.text.height);
 	} else {
 		self.detailedTextLabel.frame = CGRectZero;
 	}
