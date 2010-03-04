@@ -19,11 +19,13 @@
   NSNumber* _tweetId;
   NSString* _text;
   NSString* _source;
+  NSString* _avatarUrl;
 }
 
 @property (nonatomic, retain) NSDate*   created;
 @property (nonatomic, retain) NSNumber* tweetId;
 @property (nonatomic, copy)   NSString* text;
 @property (nonatomic, copy)   NSString* source;
+@property (nonatomic, copy)   NSString* imageUrl;
 
 @end

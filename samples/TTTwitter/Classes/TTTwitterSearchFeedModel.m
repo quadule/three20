@@ -86,6 +86,8 @@ static NSString* kTwitterSearchFeedFormat = @"http://search.twitter.com/search.a
   
   TT_RELEASE_SAFELY(_tweets);
   NSMutableArray* tweets = [[NSMutableArray alloc] initWithCapacity:[entries count]];
+  
+  NSPredicate *imagePredicate = [NSPredicate predicateWithFormat:@"rel == %@", @"image"];
 
   for (NSDictionary* entry in entries) {
     TTTwitterTweet* tweet = [[TTTwitterTweet alloc] init];
@@ -97,6 +99,9 @@ static NSString* kTwitterSearchFeedFormat = @"http://search.twitter.com/search.a
                      [[[entry objectForKey:@"id"] objectForXMLNode] longLongValue]];
     tweet.text = [[entry objectForKey:@"title"] objectForXMLNode];
     tweet.source = [[entry objectForKey:@"twitter:source"] objectForXMLNode];
+    
+    NSArray *links = [[entry objectForKey:@"link"] filteredArrayUsingPredicate:imagePredicate];
+    tweet.imageUrl = [[links objectAtIndex:0] objectForKey:@"href"];
     
     [tweets addObject:tweet];
     TT_RELEASE_SAFELY(tweet);

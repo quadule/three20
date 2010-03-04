@@ -26,7 +26,7 @@
 @synthesize tweetId   = _tweetId;
 @synthesize text      = _text;
 @synthesize source    = _source;
-
+@synthesize imageUrl = _avatarUrl;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) dealloc {
@@ -34,6 +34,7 @@
   TT_RELEASE_SAFELY(_tweetId);
   TT_RELEASE_SAFELY(_text);
   TT_RELEASE_SAFELY(_source);
+  TT_RELEASE_SAFELY(_avatarUrl);
   [super dealloc];
 }
 

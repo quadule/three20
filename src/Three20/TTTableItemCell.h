@@ -67,6 +67,21 @@
 
 @end
 
+@interface TTTableStyledMessageItemCell : TTTableLinkedItemCell {
+  UILabel* _titleLabel;
+  UILabel* _timestampLabel;
+  TTStyledTextLabel *_detailedTextLabel;
+  TTImageView* _imageView2;
+}
+
+@property(nonatomic,readonly,retain) UILabel* titleLabel;
+@property(nonatomic,readonly) UILabel* captionLabel;
+@property(nonatomic,readonly,retain) UILabel* timestampLabel;
+@property(nonatomic,readonly,retain) TTImageView* imageView2;
+@property(nonatomic,readonly,retain) TTStyledTextLabel* detailedTextLabel;
+
+@end
+
 @interface TTTableMoreButtonCell : TTTableSubtitleItemCell {
   UIActivityIndicatorView* _activityIndicatorView;
   BOOL _animating;

@@ -55,14 +55,21 @@
   NSMutableArray* items = [[NSMutableArray alloc] init];
 
   for (TTTwitterTweet* tweet in _searchFeedModel.tweets) {
-    //TTDPRINT(@"Response text: %@", response.text);
+    NSString *username = @"Username";
+    NSString *url = [NSString stringWithFormat:@"http://twitter.com/%@",
+                     [username stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
+    NSString *link = [NSString stringWithFormat:@"<a href='%@'>%@</a>", url, username];
+    
     TTStyledText* styledText = [TTStyledText textFromXHTML:
-                                [NSString stringWithFormat:@"%@\n<b>%@</b>",
-                                 [tweet.text stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"],
-                                 [tweet.created formatRelativeTime]]
-                                                lineBreaks:YES URLs:YES];
+                                [NSString stringWithFormat:@"<b>%@</b><br />%@", link,
+                                 [tweet.text stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]]
+                               lineBreaks:YES URLs:YES];
     TTDASSERT(nil != styledText);
-    [items addObject:[TTTableStyledTextItem itemWithText:styledText]];
+    
+    TTTableStyledMessageItem *item = [TTTableStyledMessageItem itemWithText:styledText];
+    item.timestamp = tweet.created;
+    item.imageURL = tweet.imageUrl;
+    [items addObject:item];
   }
   
   self.items = items;
