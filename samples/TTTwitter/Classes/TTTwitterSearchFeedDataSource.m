@@ -53,6 +53,12 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)tableViewDidLoadModel:(UITableView*)tableView {
   NSMutableArray* items = [[NSMutableArray alloc] init];
+  
+  TTTableSummaryItem *headerItem = [TTTableSummaryItem itemWithText:
+                                    [NSString stringWithFormat:
+                                     @"Tweet with #%@ to see your posts here",
+                                     _searchFeedModel.searchQuery]];
+  [items addObject:headerItem];
 
   for (TTTwitterTweet* tweet in _searchFeedModel.tweets) {
     NSString *url = [NSString stringWithFormat:@"http://twitter.com/%@",
@@ -71,7 +77,8 @@
     [items addObject:item];
   }
   
-  self.items = items;
+  self.items = [NSMutableArray arrayWithObject:items];
+  self.sections = [NSMutableArray arrayWithObjects:@"Twitter", nil];
   TT_RELEASE_SAFELY(items);
 }
 
