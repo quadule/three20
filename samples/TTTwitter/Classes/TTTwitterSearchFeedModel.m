@@ -83,7 +83,8 @@ static NSString* kTwitterSearchFeedFormat = @"http://search.twitter.com/search.a
   NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
   [dateFormatter setTimeStyle:NSDateFormatterFullStyle];
   [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
-  
+  [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+   
   TT_RELEASE_SAFELY(_tweets);
   NSMutableArray* tweets = [[NSMutableArray alloc] initWithCapacity:[entries count]];
   
