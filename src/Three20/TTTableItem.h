@@ -190,7 +190,6 @@
 @property(nonatomic,copy) NSString* caption;
 @property(nonatomic,retain) NSDate* timestamp;
 @property(nonatomic,copy) NSString* imageURL;
-@property(nonatomic,retain) TTStyledText* text;
 
 + (id)itemWithTitle:(NSString*)title caption:(NSString*)caption text:(TTStyledText*)text
           timestamp:(NSDate*)timestamp URL:(NSString*)URL;

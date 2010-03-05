@@ -424,7 +424,7 @@
 
 @implementation TTTableStyledMessageItem
 
-@synthesize title = _title, caption = _caption, timestamp = _timestamp, imageURL = _imageURL, text = _text;
+@synthesize title = _title, caption = _caption, timestamp = _timestamp, imageURL = _imageURL;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // class public
