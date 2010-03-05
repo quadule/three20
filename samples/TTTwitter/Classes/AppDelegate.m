@@ -16,6 +16,8 @@
 
 #import "AppDelegate.h"
 
+#import "ArtexpoStylesheet.h"
+
 // Controllers
 #import "TTTwitterSearchFeedViewController.h"
 
@@ -27,6 +29,8 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
+  [TTStyleSheet setGlobalStyleSheet:[[[ArtexpoStylesheet alloc] init] autorelease]];
+  
   TTNavigator* navigator = [TTNavigator navigator];
   navigator.persistenceMode = TTNavigatorPersistenceModeNone;
 

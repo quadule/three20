@@ -28,11 +28,21 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (id) init {
   if (self = [super init]) {
-    self.title = @"Twitter feed";
+    self.title = @"Twitter";
     self.variableHeightRows = YES;
   }
 
   return self;
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+  [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 
@@ -40,12 +50,6 @@
 - (void)createModel {
   self.dataSource = [[[TTTwitterSearchFeedDataSource alloc]
                       initWithSearchQuery:@"artexpo"] autorelease];
-}
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-- (id<UITableViewDelegate>)createDelegate {
-  return [[[TTTableViewDragRefreshDelegate alloc] initWithController:self] autorelease];
 }
 
 

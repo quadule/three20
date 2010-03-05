@@ -11,6 +11,7 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2616876411417776004DFC77 /* ArtexpoStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2616876311417776004DFC77 /* ArtexpoStylesheet.m */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		6E10599C112CCCC400549F42 /* Atlas.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E10599B112CCCC400549F42 /* Atlas.m */; };
 		6E1059AA112CCF8400549F42 /* TTTwitterSearchFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1059A9112CCF8400549F42 /* TTTwitterSearchFeedViewController.m */; };
@@ -54,6 +55,8 @@
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* TTTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2616876211417776004DFC77 /* ArtexpoStylesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtexpoStylesheet.h; sourceTree = "<group>"; };
+		2616876311417776004DFC77 /* ArtexpoStylesheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtexpoStylesheet.m; sourceTree = "<group>"; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* TTTwitter_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTwitter_Prefix.pch; sourceTree = "<group>"; };
@@ -100,9 +103,13 @@
 				6E10599A112CCCC400549F42 /* Atlas.h */,
 				6E10599B112CCCC400549F42 /* Atlas.m */,
 				6EECCB77112CE5B700A8908C /* README.mdown */,
+				2616876211417776004DFC77 /* ArtexpoStylesheet.h */,
+				2616876311417776004DFC77 /* ArtexpoStylesheet.m */,
 			);
+			indentWidth = 2;
 			path = Classes;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
@@ -297,6 +304,7 @@
 				6E1059AF112CCFAF00549F42 /* TTTwitterSearchFeedModel.m in Sources */,
 				6E1059B3112CCFBB00549F42 /* TTTwitterSearchFeedDataSource.m in Sources */,
 				6E105AD2112CDBCC00549F42 /* TTTwitterTweet.m in Sources */,
+				2616876411417776004DFC77 /* ArtexpoStylesheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
