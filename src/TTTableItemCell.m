@@ -116,6 +116,8 @@ static const CGFloat kDefaultMessageImageHeight = 34;
     return TTSTYLEVAR(font);
   } else if ([item isKindOfClass:[TTTableGrayTextItem class]]) {
     return TTSTYLEVAR(font);
+  } else if ([item isKindOfClass:[TTTableSummaryItem class]]) {
+    return TTSTYLEVAR(tableSummaryFont);
   } else {
     return TTSTYLEVAR(tableFont);
   }
