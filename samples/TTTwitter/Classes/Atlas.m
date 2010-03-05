@@ -16,4 +16,4 @@
 
 #import "Atlas.h"
 
-NSString* kAppRootURLPath = @"tt://root";
+NSString* kAppRootURLPath = @"artexponewyork://home";

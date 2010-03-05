@@ -32,7 +32,7 @@
   [TTStyleSheet setGlobalStyleSheet:[[[ArtexpoStylesheet alloc] init] autorelease]];
   
   TTNavigator* navigator = [TTNavigator navigator];
-  navigator.persistenceMode = TTNavigatorPersistenceModeNone;
+  navigator.persistenceMode = TTNavigatorPersistenceModeAll;
 
   TTURLMap* map = navigator.URLMap;
 

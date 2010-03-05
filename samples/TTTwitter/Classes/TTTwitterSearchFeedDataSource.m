@@ -30,6 +30,9 @@
 - (id)initWithSearchQuery:(NSString*)searchQuery {
   if (self = [super init]) {
     _searchFeedModel = [[TTTwitterSearchFeedModel alloc] initWithSearchQuery:searchQuery];
+    
+    self.items = [NSMutableArray arrayWithObjects:[self headerItems], [self artHighlightItems], [self twitterItems], nil];
+    self.sections = [NSMutableArray arrayWithObjects:@"", @"Art Highlight", @"Twitter", nil];
   }
 
   return self;
@@ -49,16 +52,49 @@
   return _searchFeedModel;
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  return 3;
+}
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)tableViewDidLoadModel:(UITableView*)tableView {
-  NSMutableArray* items = [[NSMutableArray alloc] init];
-  
+- (NSArray*)headerItems {
+  TTTableImageItem *image = [TTTableImageItem itemWithText:nil imageURL:@"bundle://home-header.png"];
+  TTImageStyle *style = [[[TTImageStyle alloc] init] autorelease];
+  style.size = CGSizeMake(320.0, 70.0);
+  image.imageStyle = style;
+  image.URL = @"http://artexponewyork.com";
+  return [NSMutableArray arrayWithObject:image];
+}
+
+- (NSArray*)artHighlightItems {
+  return [NSMutableArray array];
+}
+
+- (NSArray*)twitterItems {
   TTTableSummaryItem *headerItem = [TTTableSummaryItem itemWithText:
                                     [NSString stringWithFormat:
                                      @"Tweet with #%@ to see your posts here",
                                      _searchFeedModel.searchQuery]];
-  [items addObject:headerItem];
+  return [NSMutableArray arrayWithObject:headerItem];
+}
+
+- (void)showLoading:(BOOL)show {
+  NSMutableArray *twitterItems = [self.items objectAtIndex:2];
+  if (show) {
+    TTTableActivityItem *loading = [TTTableActivityItem itemWithText:@"Loading..."];
+    [twitterItems addObject:loading];
+  } else {
+    for (id item in twitterItems) {
+      if ([item isMemberOfClass:[TTTableActivityItem class]]) {
+        [twitterItems removeObjectIdenticalTo:item];
+        break;
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)tableViewDidLoadModel:(UITableView*)tableView {
+  NSMutableArray* items = [[NSMutableArray alloc] init];
 
   for (TTTwitterTweet* tweet in _searchFeedModel.tweets) {
     NSString *url = [NSString stringWithFormat:@"http://twitter.com/%@",
@@ -77,32 +113,32 @@
     [items addObject:item];
   }
   
-  self.items = [NSMutableArray arrayWithObject:items];
-  self.sections = [NSMutableArray arrayWithObjects:@"Twitter", nil];
+  NSMutableArray *twitterItems = [self.items objectAtIndex:2];
+  [twitterItems addObjectsFromArray:items];
+  
   TT_RELEASE_SAFELY(items);
 }
 
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSString*)titleForLoading:(BOOL)reloading {
-  if (reloading) {
-    return NSLocalizedString(@"Updating Twitter feed...", @"Twitter feed updating text");
-  } else {
-    return NSLocalizedString(@"Loading Twitter feed...", @"Twitter feed loading text");
-  }
-}
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSString*)titleForEmpty {
-  return NSLocalizedString(@"No tweets found.", @"Twitter feed no results");
-}
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSString*)subtitleForError:(NSError*)error {
-  return NSLocalizedString(@"Sorry, there was an error loading the Twitter stream.", @"");
-}
+//- (NSString*)titleForLoading:(BOOL)reloading {
+//  if (reloading) {
+//    return NSLocalizedString(@"Updating Twitter feed...", @"Twitter feed updating text");
+//  } else {
+//    return NSLocalizedString(@"Loading Twitter feed...", @"Twitter feed loading text");
+//  }
+//}
+//
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//- (NSString*)titleForEmpty {
+//  return NSLocalizedString(@"No tweets found.", @"Twitter feed no results");
+//}
+//
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//- (NSString*)subtitleForError:(NSError*)error {
+//  return NSLocalizedString(@"Sorry, there was an error loading the Twitter stream.", @"");
+//}
 
 
 @end

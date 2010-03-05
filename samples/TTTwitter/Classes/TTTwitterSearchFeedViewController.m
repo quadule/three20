@@ -35,23 +35,35 @@
   return self;
 }
 
-- (void) viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
   [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
-- (void) viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
   [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
-
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)createModel {
   self.dataSource = [[[TTTwitterSearchFeedDataSource alloc]
                       initWithSearchQuery:@"artexpo"] autorelease];
+  [self.dataSource.model load:TTURLRequestCachePolicyDefault more:NO];
 }
 
+- (BOOL)shouldLoad {
+  return NO;
+}
+
+- (void)showLoading:(BOOL)show {
+  [self.dataSource showLoading:show];
+  
+  if (show) {
+    NSArray *loadingPaths = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:1 inSection:2]];
+    [self.tableView insertRowsAtIndexPaths:loadingPaths withRowAnimation:UITableViewRowAnimationNone];
+  }
+}
 
 @end
 

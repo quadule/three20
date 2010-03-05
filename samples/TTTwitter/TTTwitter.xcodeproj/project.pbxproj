@@ -12,6 +12,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2616876411417776004DFC77 /* ArtexpoStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2616876311417776004DFC77 /* ArtexpoStylesheet.m */; };
+		261687E71141AA74004DFC77 /* home-header.png in Resources */ = {isa = PBXBuildFile; fileRef = 261687E61141AA74004DFC77 /* home-header.png */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		6E10599C112CCCC400549F42 /* Atlas.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E10599B112CCCC400549F42 /* Atlas.m */; };
 		6E1059AA112CCF8400549F42 /* TTTwitterSearchFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1059A9112CCF8400549F42 /* TTTwitterSearchFeedViewController.m */; };
@@ -57,6 +58,7 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2616876211417776004DFC77 /* ArtexpoStylesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtexpoStylesheet.h; sourceTree = "<group>"; };
 		2616876311417776004DFC77 /* ArtexpoStylesheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtexpoStylesheet.m; sourceTree = "<group>"; };
+		261687E61141AA74004DFC77 /* home-header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-header.png"; sourceTree = SOURCE_ROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* TTTwitter_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTwitter_Prefix.pch; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				261687E61141AA74004DFC77 /* home-header.png */,
 				6E105B44112CDFF000549F42 /* Icon.png */,
 				EB383B6C10BBF6360000B2D2 /* Three20.bundle */,
 				8D1107310486CEB800E47090 /* TTTwitter-Info.plist */,
@@ -287,6 +290,7 @@
 				EB383B6D10BBF6360000B2D2 /* Three20.bundle in Resources */,
 				6E105B45112CDFF000549F42 /* Icon.png in Resources */,
 				6EECCB78112CE5B700A8908C /* README.mdown in Resources */,
+				261687E71141AA74004DFC77 /* home-header.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

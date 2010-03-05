@@ -893,7 +893,12 @@ static const CGFloat kDefaultMessageImageHeight = 34;
     lineBreakMode:UILineBreakModeTailTruncation];
 
   CGFloat contentHeight = textSize.height > imageHeight ? textSize.height : imageHeight;
-  return contentHeight + kVPadding*2;
+  
+  if (imageWidth >= tableView.width) {
+    return contentHeight;
+  } else {
+    return contentHeight + kVPadding*2;
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -964,14 +969,20 @@ static const CGFloat kDefaultMessageImageHeight = 34;
           iconHeight = style.size.height;
         }
       }
-
-      _imageView2.frame = CGRectMake(kHPadding, floor(self.height/2 - iconHeight/2),
-                                   iconWidth, iconHeight);
       
-      CGFloat innerWidth = self.contentView.width - (kHPadding*2 + iconWidth + kKeySpacing);
-      CGFloat innerHeight = self.contentView.height - kVPadding*2;
-      self.textLabel.frame = CGRectMake(kHPadding + iconWidth + kKeySpacing, kVPadding,
-                                        innerWidth, innerHeight);
+      if(style.size.width >= self.contentView.width) {
+        _imageView2.frame = CGRectMake(0, 0, iconWidth, iconHeight);
+        self.textLabel.frame = CGRectInset(self.contentView.bounds, kHPadding, kVPadding);
+        self.accessoryType = UITableViewCellAccessoryNone;
+      } else {
+        _imageView2.frame = CGRectMake(kHPadding, floor(self.height/2 - iconHeight/2),
+                                     iconWidth, iconHeight);
+        
+        CGFloat innerWidth = self.contentView.width - (kHPadding*2 + iconWidth + kKeySpacing);
+        CGFloat innerHeight = self.contentView.height - kVPadding*2;
+        self.textLabel.frame = CGRectMake(kHPadding + iconWidth + kKeySpacing, kVPadding,
+                                          innerWidth, innerHeight);
+      }
     } else {
       self.textLabel.frame = CGRectInset(self.contentView.bounds, kHPadding, kVPadding);
       _imageView2.frame = CGRectZero;

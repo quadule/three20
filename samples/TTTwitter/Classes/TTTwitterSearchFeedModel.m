@@ -58,7 +58,8 @@ static NSString* kTwitterSearchFeedFormat = @"http://search.twitter.com/search.a
                              delegate: self];
     
     request.cachePolicy = cachePolicy;
-    request.cacheExpirationAge = TT_CACHE_EXPIRATION_AGE_NEVER;
+    //TODO: set caching time
+    request.cacheExpirationAge = 0.0;
     
     TTURLXMLResponse* response = [[TTURLXMLResponse alloc] init];
     response.isRssFeed = YES;

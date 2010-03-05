@@ -24,5 +24,6 @@
 }
 
 - (id)initWithSearchQuery:(NSString*)searchQuery;
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView;
 
 @end
