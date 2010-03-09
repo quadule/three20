@@ -73,7 +73,8 @@
 
 - (NSString*)formatShortTime {
   NSTimeInterval diff = abs([self timeIntervalSinceNow]);
-  if (diff < TT_DAY) {
+  
+  if ([[self dateAtMidnight] isEqualToDate:[NSDate dateWithToday]]) {
     return [self formatTime];
   } else if (diff < TT_WEEK) {
     static NSDateFormatter* formatter = nil;
@@ -96,7 +97,7 @@
 
 - (NSString*)formatDateTime {
   NSTimeInterval diff = abs([self timeIntervalSinceNow]);
-  if (diff < TT_DAY) {
+  if ([[self dateAtMidnight] isEqualToDate:[NSDate dateWithToday]]) {
     return [self formatTime];
   } else if (diff < TT_WEEK) {
     static NSDateFormatter* formatter = nil;
