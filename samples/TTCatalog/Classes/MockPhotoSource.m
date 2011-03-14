@@ -11,7 +11,9 @@
   _fakeLoadTimer = nil;
 
   if (_type & MockPhotoSourceLoadError) {
-    [_delegates perform:@selector(model:didFailLoadWithError:) withObject:self withObject:nil];
+    [_delegates perform: @selector(model:didFailLoadWithError:)
+                                withObject: self
+                                withObject: nil];
   } else {
     NSMutableArray* newPhotos = [NSMutableArray array];
 
@@ -27,7 +29,7 @@
 
     [_photos release];
     _photos = [newPhotos retain];
-    
+
     for (int i = 0; i < _photos.count; ++i) {
       id<TTPhoto> photo = [_photos objectAtIndex:i];
       if ((NSNull*)photo != [NSNull null]) {
@@ -93,7 +95,7 @@
 - (void)load:(TTURLRequestCachePolicy)cachePolicy more:(BOOL)more {
   if (cachePolicy & TTURLRequestCachePolicyNetwork) {
     [_delegates perform:@selector(modelDidStartLoad:) withObject:self];
-    
+
     TT_RELEASE_SAFELY(_photos);
     _fakeLoadTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self
       selector:@selector(fakeLoadReady) userInfo:nil repeats:NO];
@@ -120,9 +122,9 @@
   return _photos.count-1;
 }
 
-- (id<TTPhoto>)photoAtIndex:(NSInteger)index {
-  if (index < _photos.count) {
-    id photo = [_photos objectAtIndex:index];
+- (id<TTPhoto>)photoAtIndex:(NSInteger)photoIndex {
+  if (photoIndex < _photos.count) {
+    id photo = [_photos objectAtIndex:photoIndex];
     if (photo == [NSNull null]) {
       return nil;
     } else {

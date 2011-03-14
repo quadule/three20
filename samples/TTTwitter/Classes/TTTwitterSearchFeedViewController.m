@@ -1,5 +1,5 @@
 //
-// Copyright 2009-2010 Facebook
+// Copyright 2009-2011 Facebook
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,44 +26,28 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (id) init {
-  if (self = [super init]) {
-    self.title = @"Twitter";
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+  if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+    self.title = @"Twitter feed";
     self.variableHeightRows = YES;
   }
 
   return self;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-  [self.navigationController setNavigationBarHidden:YES animated:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-  [super viewWillDisappear:animated];
-  [self.navigationController setNavigationBarHidden:NO animated:animated];
-}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)createModel {
   self.dataSource = [[[TTTwitterSearchFeedDataSource alloc]
-                      initWithSearchQuery:@"artexpo"] autorelease];
-  [self.dataSource.model load:TTURLRequestCachePolicyDefault more:NO];
+                      initWithSearchQuery:@"three20"] autorelease];
 }
 
-- (BOOL)shouldLoad {
-  return NO;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (id<UITableViewDelegate>)createDelegate {
+  return [[[TTTableViewDragRefreshDelegate alloc] initWithController:self] autorelease];
 }
 
-- (void)showLoading:(BOOL)show {
-  [self.dataSource showLoading:show];
-  
-  if (show) {
-    NSArray *loadingPaths = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:1 inSection:2]];
-    [self.tableView insertRowsAtIndexPaths:loadingPaths withRowAnimation:UITableViewRowAnimationNone];
-  }
-}
 
 @end
 

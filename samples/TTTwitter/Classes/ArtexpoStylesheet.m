@@ -7,9 +7,8 @@
 //
 
 #import "ArtexpoStylesheet.h"
-#import "Three20/TTStyle.h"
-#import "Three20/TTShape.h"
-#import "Three20/TTURLCache.h"
+#import "Three20Style/Three20Style.h"
+
 
 @implementation ArtexpoStylesheet
 

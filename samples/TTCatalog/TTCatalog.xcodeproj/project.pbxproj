@@ -13,6 +13,23 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28C286E10D94DF7D0034E888 /* CatalogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* CatalogController.m */; };
+		666E183012944D23001C1D97 /* SplitCatalogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E182F12944D23001C1D97 /* SplitCatalogController.m */; };
+		6675F5F412945622008DE0A6 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 6675F5F012945622008DE0A6 /* Default-Landscape.png */; };
+		6675F5F512945622008DE0A6 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 6675F5F112945622008DE0A6 /* Default-Portrait.png */; };
+		6675F5F612945622008DE0A6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6675F5F212945622008DE0A6 /* Default@2x.png */; };
+		6675F5F712945622008DE0A6 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6675F5F312945622008DE0A6 /* Icon@2x.png */; };
+		6E002567116A6D1A00D1F0CB /* TableWithShadowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E002566116A6D1A00D1F0CB /* TableWithShadowController.m */; };
+		6E3794F511B9B6DB0011C497 /* libThree20Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3794D411B9B6D70011C497 /* libThree20Core.a */; };
+		6E3794F611B9B6DC0011C497 /* libThree20Network.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3794DA11B9B6D70011C497 /* libThree20Network.a */; };
+		6E3794F711B9B6DC0011C497 /* libThree20Style.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3794E011B9B6D70011C497 /* libThree20Style.a */; };
+		6E3794F811B9B6DD0011C497 /* libThree20UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3794F211B9B6D70011C497 /* libThree20UI.a */; };
+		6E3794F911B9B6DD0011C497 /* libThree20UINavigator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3794EC11B9B6D70011C497 /* libThree20UINavigator.a */; };
+		6E3794FA11B9B6DE0011C497 /* libThree20UICommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3794E611B9B6D70011C497 /* libThree20UICommon.a */; };
+		6E7F97A9118E37C700443B46 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7F977E118E37BB00443B46 /* libThree20.a */; };
+		6E94C6AD116D98220012B12C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E94C6AB116D98220012B12C /* Default.png */; };
+		6E94C6AE116D98220012B12C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E94C6AC116D98220012B12C /* Icon.png */; };
+		7000C4C0130CCAE3006D7ADE /* DownloadTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7000C4BE130CCAE3006D7ADE /* DownloadTestModel.m */; };
+		7000C4C1130CCAE3006D7ADE /* DownloadProgressTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7000C4BF130CCAE3006D7ADE /* DownloadProgressTestController.m */; };
 		BE1288310F8973CD00F65EA2 /* StyleTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1288300F8973CD00F65EA2 /* StyleTestController.m */; };
 		BE1289C20F91811E00F65EA2 /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1289C10F91811E00F65EA2 /* mask.png */; };
 		BE1D843A0F8D104B00EC8BB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1D84390F8D104B00EC8BB8 /* QuartzCore.framework */; };
@@ -26,7 +43,6 @@
 		BE80E24A0EAEFF6100743358 /* MockPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80E2490EAEFF6100743358 /* MockPhotoSource.m */; };
 		BE80E3710EAF0F3000743358 /* TableImageTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80E3700EAF0F3000743358 /* TableImageTestController.m */; };
 		BE80E3A70EAF108500743358 /* ImageTest1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80E3A60EAF108500743358 /* ImageTest1Controller.m */; };
-		BE80E3B60EAF116700743358 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE80E3B50EAF116700743358 /* Icon.png */; };
 		BE8C0F7D0F2018C600EB0E98 /* YouTubeTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8C0F7C0F2018C600EB0E98 /* YouTubeTestController.m */; };
 		BEA6BA7F101431DA00B83B3A /* defaultPerson.png in Resources */ = {isa = PBXBuildFile; fileRef = BEA6BA7E101431DA00B83B3A /* defaultPerson.png */; };
 		BEA6BAAD101436AC00B83B3A /* defaultMusic.png in Resources */ = {isa = PBXBuildFile; fileRef = BEA6BAAC101436AC00B83B3A /* defaultMusic.png */; };
@@ -39,33 +55,160 @@
 		BEE346BC0F48F15C008C826E /* SearchTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE346BB0F48F15C008C826E /* SearchTestController.m */; };
 		BEE348AC0F490F43008C826E /* MockDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE348AB0F490F43008C826E /* MockDataSource.m */; };
 		BEE38E810EB288BA00189902 /* ActivityTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE38E800EB288BA00189902 /* ActivityTestController.m */; };
-		BEE7FD150F3581C1002788A5 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE7FD130F358198002788A5 /* libThree20.a */; };
 		BEF199220F818E720010D36E /* StyledTextTableTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF1991F0F818E720010D36E /* StyledTextTableTestController.m */; };
 		BEF199230F818E720010D36E /* StyledTextTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF199210F818E720010D36E /* StyledTextTestController.m */; };
 		BEF6EC370F280CB300CF4096 /* ScrollViewTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF6EC360F280CB300CF4096 /* ScrollViewTestController.m */; };
+		E46662FE127F91A4001A0F20 /* TableWithBannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E46662FD127F91A4001A0F20 /* TableWithBannerController.m */; };
+		E4D1D1D61306D2670090AE0C /* TableDragRefreshController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D1D51306D2670090AE0C /* TableDragRefreshController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BEE7FD120F358198002788A5 /* PBXContainerItemProxy */ = {
+		6E3794D311B9B6D70011C497 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BEE7FD0E0F358198002788A5 /* Three20.xcodeproj */;
+			containerPortal = 6E3794BF11B9B6D70011C497 /* Three20Core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20Core;
+		};
+		6E3794D511B9B6D70011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794BF11B9B6D70011C497 /* Three20Core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = UnitTests;
+		};
+		6E3794D911B9B6D70011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794C211B9B6D70011C497 /* Three20Network.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20Network;
+		};
+		6E3794DB11B9B6D70011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794C211B9B6D70011C497 /* Three20Network.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = UnitTests;
+		};
+		6E3794DF11B9B6D70011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794C511B9B6D70011C497 /* Three20Style.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20Style;
+		};
+		6E3794E111B9B6D70011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794C511B9B6D70011C497 /* Three20Style.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = UnitTests;
+		};
+		6E3794E511B9B6D70011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794C811B9B6D70011C497 /* Three20UICommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20UICommon;
+		};
+		6E3794E711B9B6D70011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794C811B9B6D70011C497 /* Three20UICommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = UnitTests;
+		};
+		6E3794EB11B9B6D70011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794CB11B9B6D70011C497 /* Three20UINavigator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20UINavigator;
+		};
+		6E3794ED11B9B6D70011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794CB11B9B6D70011C497 /* Three20UINavigator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = UnitTests;
+		};
+		6E3794F111B9B6D70011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794CE11B9B6D70011C497 /* Three20UI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20UI;
+		};
+		6E3794F311B9B6D70011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794CE11B9B6D70011C497 /* Three20UI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = UnitTests;
+		};
+		6E3794FF11B9B6EE0011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794CE11B9B6D70011C497 /* Three20UI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20UI;
+		};
+		6E37950111B9B6EE0011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794CB11B9B6D70011C497 /* Three20UINavigator.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20UINavigator;
+		};
+		6E37950311B9B6EE0011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794C811B9B6D70011C497 /* Three20UICommon.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20UICommon;
+		};
+		6E37950511B9B6EE0011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794C511B9B6D70011C497 /* Three20Style.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20Style;
+		};
+		6E37950711B9B6EE0011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794C211B9B6D70011C497 /* Three20Network.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20Network;
+		};
+		6E37950911B9B6EE0011C497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E3794BF11B9B6D70011C497 /* Three20Core.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20Core;
+		};
+		6E7F977D118E37BB00443B46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E7F9752118E37BA00443B46 /* Three20.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
 			remoteInfo = Three20;
 		};
-		BEE7FD160F3581D1002788A5 /* PBXContainerItemProxy */ = {
+		6E7F977F118E37BB00443B46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BEE7FD0E0F358198002788A5 /* Three20.xcodeproj */;
+			containerPortal = 6E7F9752118E37BA00443B46 /* Three20.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = UnitTests;
+		};
+		6E7F97AA118E37CE00443B46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E7F9752118E37BA00443B46 /* Three20.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
 			remoteInfo = Three20;
-		};
-		EB4CD9FE10CA0FB300A856E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BEE7FD0E0F358198002788A5 /* Three20.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
-			remoteInfo = CoreUnitTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -76,11 +219,36 @@
 		1D6058910D05DD3D006BFB54 /* TTCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		28A0AAE50D9B0CCF005BE974 /* TTCatalog_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCatalog_Prefix.pch; sourceTree = "<group>"; };
 		28C286DF0D94DF7D0034E888 /* CatalogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogController.h; sourceTree = "<group>"; };
 		28C286E00D94DF7D0034E888 /* CatalogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatalogController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		665E998712662FFA0025FA42 /* TTCatalog-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TTCatalog-Info.plist"; sourceTree = "<group>"; };
+		666E182E12944D23001C1D97 /* SplitCatalogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitCatalogController.h; sourceTree = "<group>"; };
+		666E182F12944D23001C1D97 /* SplitCatalogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitCatalogController.m; sourceTree = "<group>"; };
+		6675F5F012945622008DE0A6 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape.png"; path = "../Resources/Default-Landscape.png"; sourceTree = SOURCE_ROOT; };
+		6675F5F112945622008DE0A6 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "../Resources/Default-Portrait.png"; sourceTree = SOURCE_ROOT; };
+		6675F5F212945622008DE0A6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Resources/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		6675F5F312945622008DE0A6 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Resources/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		6E002565116A6D1A00D1F0CB /* TableWithShadowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableWithShadowController.h; sourceTree = "<group>"; };
+		6E002566116A6D1A00D1F0CB /* TableWithShadowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableWithShadowController.m; sourceTree = "<group>"; };
+		6E3794BF11B9B6D70011C497 /* Three20Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Core.xcodeproj; path = ../../src/Three20Core/Three20Core.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6E3794C211B9B6D70011C497 /* Three20Network.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Network.xcodeproj; path = ../../src/Three20Network/Three20Network.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6E3794C511B9B6D70011C497 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = ../../src/Three20Style/Three20Style.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6E3794C811B9B6D70011C497 /* Three20UICommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UICommon.xcodeproj; path = ../../src/Three20UICommon/Three20UICommon.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6E3794CB11B9B6D70011C497 /* Three20UINavigator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UINavigator.xcodeproj; path = ../../src/Three20UINavigator/Three20UINavigator.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6E3794CE11B9B6D70011C497 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = ../../src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6E7F9752118E37BA00443B46 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../../src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6E7F9960118E3A6000443B46 /* App.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = App.xcconfig; path = Configurations/App.xcconfig; sourceTree = "<group>"; };
+		6E7F9961118E3A6000443B46 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = Configurations/Project.xcconfig; sourceTree = "<group>"; };
+		6E7F9962118E3A6000443B46 /* RelPath.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = RelPath.xcconfig; path = Configurations/RelPath.xcconfig; sourceTree = "<group>"; };
+		6E7F9963118E3A6000443B46 /* UnitTests.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = UnitTests.xcconfig; path = Configurations/UnitTests.xcconfig; sourceTree = "<group>"; };
+		6E7F9964118E3A7600443B46 /* TTCatalog_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTCatalog_Prefix.pch; path = Headers/TTCatalog_Prefix.pch; sourceTree = "<group>"; };
+		6E94C6AB116D98220012B12C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Resources/Default.png; sourceTree = SOURCE_ROOT; };
+		6E94C6AC116D98220012B12C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Resources/Icon.png; sourceTree = SOURCE_ROOT; };
+		7000C4BE130CCAE3006D7ADE /* DownloadTestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTestModel.m; sourceTree = "<group>"; };
+		7000C4BF130CCAE3006D7ADE /* DownloadProgressTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadProgressTestController.m; sourceTree = "<group>"; };
+		7000C4C2130CCB0F006D7ADE /* DownloadTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTestModel.h; sourceTree = "<group>"; };
+		7000C4C3130CCB0F006D7ADE /* DownloadProgressTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadProgressTestController.h; sourceTree = "<group>"; };
 		BE12882F0F8973CD00F65EA2 /* StyleTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleTestController.h; sourceTree = "<group>"; };
 		BE1288300F8973CD00F65EA2 /* StyleTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleTestController.m; sourceTree = "<group>"; };
 		BE1289C10F91811E00F65EA2 /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask.png; sourceTree = "<group>"; };
@@ -103,7 +271,6 @@
 		BE80E3700EAF0F3000743358 /* TableImageTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableImageTestController.m; sourceTree = "<group>"; };
 		BE80E3A50EAF108500743358 /* ImageTest1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTest1Controller.h; sourceTree = "<group>"; };
 		BE80E3A60EAF108500743358 /* ImageTest1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTest1Controller.m; sourceTree = "<group>"; };
-		BE80E3B50EAF116700743358 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		BE8C0F7B0F2018C600EB0E98 /* YouTubeTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeTestController.h; sourceTree = "<group>"; };
 		BE8C0F7C0F2018C600EB0E98 /* YouTubeTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeTestController.m; sourceTree = "<group>"; };
 		BEA6BA7E101431DA00B83B3A /* defaultPerson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPerson.png; sourceTree = "<group>"; };
@@ -124,13 +291,16 @@
 		BEE348AB0F490F43008C826E /* MockDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockDataSource.m; sourceTree = "<group>"; };
 		BEE38E7F0EB288BA00189902 /* ActivityTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTestController.h; sourceTree = "<group>"; };
 		BEE38E800EB288BA00189902 /* ActivityTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTestController.m; sourceTree = "<group>"; };
-		BEE7FD0E0F358198002788A5 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../../src/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
 		BEF1991E0F818E720010D36E /* StyledTextTableTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyledTextTableTestController.h; sourceTree = "<group>"; };
 		BEF1991F0F818E720010D36E /* StyledTextTableTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledTextTableTestController.m; sourceTree = "<group>"; };
 		BEF199200F818E720010D36E /* StyledTextTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyledTextTestController.h; sourceTree = "<group>"; };
 		BEF199210F818E720010D36E /* StyledTextTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledTextTestController.m; sourceTree = "<group>"; };
 		BEF6EC350F280CB300CF4096 /* ScrollViewTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewTestController.h; sourceTree = "<group>"; };
 		BEF6EC360F280CB300CF4096 /* ScrollViewTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewTestController.m; sourceTree = "<group>"; };
+		E46662FC127F91A4001A0F20 /* TableWithBannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableWithBannerController.h; sourceTree = "<group>"; };
+		E46662FD127F91A4001A0F20 /* TableWithBannerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableWithBannerController.m; sourceTree = "<group>"; };
+		E4D1D1D41306D2670090AE0C /* TableDragRefreshController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableDragRefreshController.h; sourceTree = "<group>"; };
+		E4D1D1D51306D2670090AE0C /* TableDragRefreshController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableDragRefreshController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,11 +308,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEE7FD150F3581C1002788A5 /* libThree20.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				BE1D843A0F8D104B00EC8BB8 /* QuartzCore.framework in Frameworks */,
+				6E7F97A9118E37C700443B46 /* libThree20.a in Frameworks */,
+				6E3794F511B9B6DB0011C497 /* libThree20Core.a in Frameworks */,
+				6E3794F611B9B6DC0011C497 /* libThree20Network.a in Frameworks */,
+				6E3794F711B9B6DC0011C497 /* libThree20Style.a in Frameworks */,
+				6E3794F811B9B6DD0011C497 /* libThree20UI.a in Frameworks */,
+				6E3794F911B9B6DD0011C497 /* libThree20UINavigator.a in Frameworks */,
+				6E3794FA11B9B6DE0011C497 /* libThree20UICommon.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +330,8 @@
 			children = (
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
+				666E182E12944D23001C1D97 /* SplitCatalogController.h */,
+				666E182F12944D23001C1D97 /* SplitCatalogController.m */,
 				28C286DF0D94DF7D0034E888 /* CatalogController.h */,
 				28C286E00D94DF7D0034E888 /* CatalogController.m */,
 				EA1080F1101B37E90098AAC2 /* Photos */,
@@ -180,8 +358,10 @@
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
+				6E7F995E118E3A4800443B46 /* Configurations */,
+				6E7F9782118E37BE00443B46 /* Dependencies */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
 			name = CustomTemplate;
@@ -190,7 +370,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				28A0AAE50D9B0CCF005BE974 /* TTCatalog_Prefix.pch */,
+				6E7F9964118E3A7600443B46 /* TTCatalog_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -200,14 +380,19 @@
 			isa = PBXGroup;
 			children = (
 				BEDCFBB30F4FFF820060B7D1 /* Three20.bundle */,
-				BE80E3B50EAF116700743358 /* Icon.png */,
+				6E94C6AB116D98220012B12C /* Default.png */,
+				6675F5F012945622008DE0A6 /* Default-Landscape.png */,
+				6675F5F112945622008DE0A6 /* Default-Portrait.png */,
+				6675F5F212945622008DE0A6 /* Default@2x.png */,
+				6675F5F312945622008DE0A6 /* Icon@2x.png */,
+				6E94C6AC116D98220012B12C /* Icon.png */,
 				BEA6BAAC101436AC00B83B3A /* defaultMusic.png */,
 				BEA6BA7E101431DA00B83B3A /* defaultPerson.png */,
 				BE6E4DBF0F46A352001CE9B4 /* tableIcon.png */,
 				BECB1CC10F46AE9600AE5B52 /* person.jpg */,
 				BE3188A00F822E2C00E3067D /* smiley.png */,
 				BE1289C10F91811E00F65EA2 /* mask.png */,
-				8D1107310486CEB800E47090 /* Info.plist */,
+				665E998712662FFA0025FA42 /* TTCatalog-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -216,12 +401,127 @@
 			isa = PBXGroup;
 			children = (
 				BE1D84390F8D104B00EC8BB8 /* QuartzCore.framework */,
-				BEE7FD0E0F358198002788A5 /* Three20.xcodeproj */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E002564116A6CF900D1F0CB /* Table With Shadow */ = {
+			isa = PBXGroup;
+			children = (
+				6E002565116A6D1A00D1F0CB /* TableWithShadowController.h */,
+				6E002566116A6D1A00D1F0CB /* TableWithShadowController.m */,
+			);
+			name = "Table With Shadow";
+			sourceTree = "<group>";
+		};
+		6E3794C011B9B6D70011C497 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E3794D411B9B6D70011C497 /* libThree20Core.a */,
+				6E3794D611B9B6D70011C497 /* CoreUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E3794C311B9B6D70011C497 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E3794DA11B9B6D70011C497 /* libThree20Network.a */,
+				6E3794DC11B9B6D70011C497 /* NetworkUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E3794C611B9B6D70011C497 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E3794E011B9B6D70011C497 /* libThree20Style.a */,
+				6E3794E211B9B6D70011C497 /* StyleUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E3794C911B9B6D70011C497 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E3794E611B9B6D70011C497 /* libThree20UICommon.a */,
+				6E3794E811B9B6D70011C497 /* UICommonUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E3794CC11B9B6D70011C497 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E3794EC11B9B6D70011C497 /* libThree20UINavigator.a */,
+				6E3794EE11B9B6D70011C497 /* UINavigatorUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E3794CF11B9B6D70011C497 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E3794F211B9B6D70011C497 /* libThree20UI.a */,
+				6E3794F411B9B6D70011C497 /* UIUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E37951F11B9B70C0011C497 /* Three20 */ = {
+			isa = PBXGroup;
+			children = (
+				6E3794BF11B9B6D70011C497 /* Three20Core.xcodeproj */,
+				6E3794C211B9B6D70011C497 /* Three20Network.xcodeproj */,
+				6E3794C511B9B6D70011C497 /* Three20Style.xcodeproj */,
+				6E3794C811B9B6D70011C497 /* Three20UICommon.xcodeproj */,
+				6E3794CB11B9B6D70011C497 /* Three20UINavigator.xcodeproj */,
+				6E3794CE11B9B6D70011C497 /* Three20UI.xcodeproj */,
+				6E7F9752118E37BA00443B46 /* Three20.xcodeproj */,
+			);
+			name = Three20;
+			sourceTree = "<group>";
+		};
+		6E7F9753118E37BA00443B46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E7F977E118E37BB00443B46 /* libThree20.a */,
+				6E7F9780118E37BB00443B46 /* Three20UnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E7F9782118E37BE00443B46 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				6E37951F11B9B70C0011C497 /* Three20 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		6E7F995E118E3A4800443B46 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				6E7F9960118E3A6000443B46 /* App.xcconfig */,
+				6E7F9961118E3A6000443B46 /* Project.xcconfig */,
+				6E7F9962118E3A6000443B46 /* RelPath.xcconfig */,
+				6E7F9963118E3A6000443B46 /* UnitTests.xcconfig */,
+			);
+			name = Configurations;
+			sourceTree = "<group>";
+		};
+		7000C4B7130CCAC7006D7ADE /* Download Progress */ = {
+			isa = PBXGroup;
+			children = (
+				7000C4C2130CCB0F006D7ADE /* DownloadTestModel.h */,
+				7000C4BE130CCAE3006D7ADE /* DownloadTestModel.m */,
+				7000C4C3130CCB0F006D7ADE /* DownloadProgressTestController.h */,
+				7000C4BF130CCAE3006D7ADE /* DownloadProgressTestController.m */,
+			);
+			name = "Download Progress";
 			sourceTree = "<group>";
 		};
 		BEC7875C1040A405005C00CF /* Launcher */ = {
@@ -233,13 +533,22 @@
 			name = Launcher;
 			sourceTree = "<group>";
 		};
-		BEE7FD0F0F358198002788A5 /* Products */ = {
+		E46662F9127F916C001A0F20 /* Table with Banner */ = {
 			isa = PBXGroup;
 			children = (
-				BEE7FD130F358198002788A5 /* libThree20.a */,
-				EB4CD9FF10CA0FB300A856E5 /* UnitTests.octest */,
+				E46662FC127F91A4001A0F20 /* TableWithBannerController.h */,
+				E46662FD127F91A4001A0F20 /* TableWithBannerController.m */,
 			);
-			name = Products;
+			name = "Table with Banner";
+			sourceTree = "<group>";
+		};
+		E4D1D1C41306D12D0090AE0C /* Table Drag Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				E4D1D1D41306D2670090AE0C /* TableDragRefreshController.h */,
+				E4D1D1D51306D2670090AE0C /* TableDragRefreshController.m */,
+			);
+			name = "Table Drag Refresh";
 			sourceTree = "<group>";
 		};
 		EA1080F1101B37E90098AAC2 /* Photos */ = {
@@ -367,6 +676,7 @@
 		EA108141101B39510098AAC2 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				7000C4B7130CCAC7006D7ADE /* Download Progress */,
 				EA108148101B39660098AAC2 /* Web Image */,
 				EA108149101B396A0098AAC2 /* YouTube Player */,
 				EA10814F101B398C0098AAC2 /* Activity Labels */,
@@ -418,6 +728,9 @@
 				EA108175101B3A5C0098AAC2 /* Table Controls */,
 				EA108172101B3A4A0098AAC2 /* Styled Labels in Table */,
 				EA108169101B3A3A0098AAC2 /* Web Images in Table */,
+				E46662F9127F916C001A0F20 /* Table with Banner */,
+				6E002564116A6CF900D1F0CB /* Table With Shadow */,
+				E4D1D1C41306D12D0090AE0C /* Table Drag Refresh */,
 			);
 			name = Tables;
 			sourceTree = "<group>";
@@ -472,7 +785,13 @@
 			buildRules = (
 			);
 			dependencies = (
-				BEE7FD170F3581D1002788A5 /* PBXTargetDependency */,
+				6E7F97AB118E37CE00443B46 /* PBXTargetDependency */,
+				6E37950011B9B6EE0011C497 /* PBXTargetDependency */,
+				6E37950211B9B6EE0011C497 /* PBXTargetDependency */,
+				6E37950411B9B6EE0011C497 /* PBXTargetDependency */,
+				6E37950611B9B6EE0011C497 /* PBXTargetDependency */,
+				6E37950811B9B6EE0011C497 /* PBXTargetDependency */,
+				6E37950A11B9B6EE0011C497 /* PBXTargetDependency */,
 			);
 			name = TTCatalog;
 			productName = PhotoBrowser;
@@ -484,8 +803,12 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TTCatalog" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -498,8 +821,32 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = BEE7FD0F0F358198002788A5 /* Products */;
-					ProjectRef = BEE7FD0E0F358198002788A5 /* Three20.xcodeproj */;
+					ProductGroup = 6E7F9753118E37BA00443B46 /* Products */;
+					ProjectRef = 6E7F9752118E37BA00443B46 /* Three20.xcodeproj */;
+				},
+				{
+					ProductGroup = 6E3794C011B9B6D70011C497 /* Products */;
+					ProjectRef = 6E3794BF11B9B6D70011C497 /* Three20Core.xcodeproj */;
+				},
+				{
+					ProductGroup = 6E3794C311B9B6D70011C497 /* Products */;
+					ProjectRef = 6E3794C211B9B6D70011C497 /* Three20Network.xcodeproj */;
+				},
+				{
+					ProductGroup = 6E3794C611B9B6D70011C497 /* Products */;
+					ProjectRef = 6E3794C511B9B6D70011C497 /* Three20Style.xcodeproj */;
+				},
+				{
+					ProductGroup = 6E3794CF11B9B6D70011C497 /* Products */;
+					ProjectRef = 6E3794CE11B9B6D70011C497 /* Three20UI.xcodeproj */;
+				},
+				{
+					ProductGroup = 6E3794C911B9B6D70011C497 /* Products */;
+					ProjectRef = 6E3794C811B9B6D70011C497 /* Three20UICommon.xcodeproj */;
+				},
+				{
+					ProductGroup = 6E3794CC11B9B6D70011C497 /* Products */;
+					ProjectRef = 6E3794CB11B9B6D70011C497 /* Three20UINavigator.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -510,18 +857,102 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		BEE7FD130F358198002788A5 /* libThree20.a */ = {
+		6E3794D411B9B6D70011C497 /* libThree20Core.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20Core.a;
+			remoteRef = 6E3794D311B9B6D70011C497 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E3794D611B9B6D70011C497 /* CoreUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CoreUnitTests.octest;
+			remoteRef = 6E3794D511B9B6D70011C497 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E3794DA11B9B6D70011C497 /* libThree20Network.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20Network.a;
+			remoteRef = 6E3794D911B9B6D70011C497 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E3794DC11B9B6D70011C497 /* NetworkUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NetworkUnitTests.octest;
+			remoteRef = 6E3794DB11B9B6D70011C497 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E3794E011B9B6D70011C497 /* libThree20Style.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20Style.a;
+			remoteRef = 6E3794DF11B9B6D70011C497 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E3794E211B9B6D70011C497 /* StyleUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = StyleUnitTests.octest;
+			remoteRef = 6E3794E111B9B6D70011C497 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E3794E611B9B6D70011C497 /* libThree20UICommon.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20UICommon.a;
+			remoteRef = 6E3794E511B9B6D70011C497 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E3794E811B9B6D70011C497 /* UICommonUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UICommonUnitTests.octest;
+			remoteRef = 6E3794E711B9B6D70011C497 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E3794EC11B9B6D70011C497 /* libThree20UINavigator.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20UINavigator.a;
+			remoteRef = 6E3794EB11B9B6D70011C497 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E3794EE11B9B6D70011C497 /* UINavigatorUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UINavigatorUnitTests.octest;
+			remoteRef = 6E3794ED11B9B6D70011C497 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E3794F211B9B6D70011C497 /* libThree20UI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20UI.a;
+			remoteRef = 6E3794F111B9B6D70011C497 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E3794F411B9B6D70011C497 /* UIUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UIUnitTests.octest;
+			remoteRef = 6E3794F311B9B6D70011C497 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E7F977E118E37BB00443B46 /* libThree20.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libThree20.a;
-			remoteRef = BEE7FD120F358198002788A5 /* PBXContainerItemProxy */;
+			remoteRef = 6E7F977D118E37BB00443B46 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EB4CD9FF10CA0FB300A856E5 /* UnitTests.octest */ = {
+		6E7F9780118E37BB00443B46 /* Three20UnitTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = UnitTests.octest;
-			remoteRef = EB4CD9FE10CA0FB300A856E5 /* PBXContainerItemProxy */;
+			path = Three20UnitTests.octest;
+			remoteRef = 6E7F977F118E37BB00443B46 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -531,7 +962,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE80E3B60EAF116700743358 /* Icon.png in Resources */,
 				BE6E4DC00F46A352001CE9B4 /* tableIcon.png in Resources */,
 				BECB1CC20F46AE9600AE5B52 /* person.jpg in Resources */,
 				BEDCFBB40F4FFF820060B7D1 /* Three20.bundle in Resources */,
@@ -539,6 +969,12 @@
 				BE1289C20F91811E00F65EA2 /* mask.png in Resources */,
 				BEA6BA7F101431DA00B83B3A /* defaultPerson.png in Resources */,
 				BEA6BAAD101436AC00B83B3A /* defaultMusic.png in Resources */,
+				6E94C6AD116D98220012B12C /* Default.png in Resources */,
+				6E94C6AE116D98220012B12C /* Icon.png in Resources */,
+				6675F5F412945622008DE0A6 /* Default-Landscape.png in Resources */,
+				6675F5F512945622008DE0A6 /* Default-Portrait.png in Resources */,
+				6675F5F612945622008DE0A6 /* Default@2x.png in Resources */,
+				6675F5F712945622008DE0A6 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,86 +1008,115 @@
 				BEC5EC680F8C307E007622CD /* ButtonTestController.m in Sources */,
 				BE20A49C0FF418B2008791F4 /* TableControlsTestController.m in Sources */,
 				BEC787631040A430005C00CF /* LauncherViewTestController.m in Sources */,
+				6E002567116A6D1A00D1F0CB /* TableWithShadowController.m in Sources */,
+				E46662FE127F91A4001A0F20 /* TableWithBannerController.m in Sources */,
+				666E183012944D23001C1D97 /* SplitCatalogController.m in Sources */,
+				E4D1D1D61306D2670090AE0C /* TableDragRefreshController.m in Sources */,
+				7000C4C0130CCAE3006D7ADE /* DownloadTestModel.m in Sources */,
+				7000C4C1130CCAE3006D7ADE /* DownloadProgressTestController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BEE7FD170F3581D1002788A5 /* PBXTargetDependency */ = {
+		6E37950011B9B6EE0011C497 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20UI;
+			targetProxy = 6E3794FF11B9B6EE0011C497 /* PBXContainerItemProxy */;
+		};
+		6E37950211B9B6EE0011C497 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20UINavigator;
+			targetProxy = 6E37950111B9B6EE0011C497 /* PBXContainerItemProxy */;
+		};
+		6E37950411B9B6EE0011C497 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20UICommon;
+			targetProxy = 6E37950311B9B6EE0011C497 /* PBXContainerItemProxy */;
+		};
+		6E37950611B9B6EE0011C497 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20Style;
+			targetProxy = 6E37950511B9B6EE0011C497 /* PBXContainerItemProxy */;
+		};
+		6E37950811B9B6EE0011C497 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20Network;
+			targetProxy = 6E37950711B9B6EE0011C497 /* PBXContainerItemProxy */;
+		};
+		6E37950A11B9B6EE0011C497 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20Core;
+			targetProxy = 6E37950911B9B6EE0011C497 /* PBXContainerItemProxy */;
+		};
+		6E7F97AB118E37CE00443B46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Three20;
-			targetProxy = BEE7FD160F3581D1002788A5 /* PBXContainerItemProxy */;
+			targetProxy = 6E7F97AA118E37CE00443B46 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E7F9960118E3A6000443B46 /* App.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "Don't Code Sign";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUILD_STYLE = Debug;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = TTCatalog_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-				);
-				PRODUCT_NAME = TTCatalog;
-				SDKROOT = iphonesimulator3.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		1D6058950D05DD3E006BFB54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E7F9960118E3A6000443B46 /* App.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUILD_STYLE = Release;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = TTCatalog_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-				);
-				PRODUCT_NAME = TTCatalog;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E7F9961118E3A6000443B46 /* Project.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				BUILD_STYLE = Debug;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = ../../src;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphonesimulator2.2;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E7F9961118E3A6000443B46 /* Project.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUILD_STYLE = Release;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = ../../src;
-				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = DefaultProfileUuid;
-				SDKROOT = iphonesimulator2.2;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};

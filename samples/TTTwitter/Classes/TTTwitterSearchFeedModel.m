@@ -1,5 +1,5 @@
 //
-// Copyright 2009-2010 Facebook
+// Copyright 2009-2011 Facebook
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,7 +18,12 @@
 
 #import "TTTwitterTweet.h"
 
-static NSString* kTwitterSearchFeedFormat = @"http://search.twitter.com/search.atom?q=%@";
+#import <extThree20JSON/extThree20JSON.h>
+
+// Twitter search API documented here:
+// http://apiwiki.twitter.com/w/page/22554756/Twitter-Search-API-Method:-search
+static NSString* kTwitterSearchFeedFormat =
+  @"http://search.twitter.com/search.json?q=%@&rpp=%u&page=%u";
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -26,14 +31,18 @@ static NSString* kTwitterSearchFeedFormat = @"http://search.twitter.com/search.a
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation TTTwitterSearchFeedModel
 
-@synthesize searchQuery = _searchQuery;
-@synthesize tweets      = _tweets;
-
+@synthesize searchQuery     = _searchQuery;
+@synthesize tweets          = _tweets;
+@synthesize resultsPerPage  = _resultsPerPage;
+@synthesize finished        = _finished;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)initWithSearchQuery:(NSString*)searchQuery {
   if (self = [super init]) {
     self.searchQuery = searchQuery;
+    _resultsPerPage = 10;
+    _page = 1;
+    _tweets = [[NSMutableArray array] retain];
   }
 
   return self;
@@ -51,21 +60,28 @@ static NSString* kTwitterSearchFeedFormat = @"http://search.twitter.com/search.a
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)load:(TTURLRequestCachePolicy)cachePolicy more:(BOOL)more {
   if (!self.isLoading && TTIsStringWithAnyText(_searchQuery)) {
-    NSString* url = [NSString stringWithFormat:kTwitterSearchFeedFormat, _searchQuery];
-    
+    if (more) {
+      _page++;
+    }
+    else {
+      _page = 1;
+      _finished = NO;
+      [_tweets removeAllObjects];
+    }
+
+    NSString* url = [NSString stringWithFormat:kTwitterSearchFeedFormat, _searchQuery, _resultsPerPage, _page];
+
     TTURLRequest* request = [TTURLRequest
                              requestWithURL: url
                              delegate: self];
-    
+
     request.cachePolicy = cachePolicy;
-    //TODO: set caching time
-    request.cacheExpirationAge = 0.0;
-    
-    TTURLXMLResponse* response = [[TTURLXMLResponse alloc] init];
-    response.isRssFeed = YES;
+    request.cacheExpirationAge = TT_CACHE_EXPIRATION_AGE_NEVER;
+
+    TTURLJSONResponse* response = [[TTURLJSONResponse alloc] init];
     request.response = response;
     TT_RELEASE_SAFELY(response);
-    
+
     [request send];
   }
 }
@@ -73,46 +89,45 @@ static NSString* kTwitterSearchFeedFormat = @"http://search.twitter.com/search.a
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)requestDidFinishLoad:(TTURLRequest*)request {
-  TTURLXMLResponse* response = request.response;
+  TTURLJSONResponse* response = request.response;
   TTDASSERT([response.rootObject isKindOfClass:[NSDictionary class]]);
 
   NSDictionary* feed = response.rootObject;
-  TTDASSERT([[feed objectForKey:@"entry"] isKindOfClass:[NSArray class]]);
+  TTDASSERT([[feed objectForKey:@"results"] isKindOfClass:[NSArray class]]);
 
-  NSArray* entries = [feed objectForKey:@"entry"];
-  
+  NSArray* entries = [feed objectForKey:@"results"];
+
   NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
   [dateFormatter setTimeStyle:NSDateFormatterFullStyle];
   [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
   [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
-   
-  TT_RELEASE_SAFELY(_tweets);
-  NSMutableArray* tweets = [[NSMutableArray alloc] initWithCapacity:[entries count]];
+
+  NSMutableArray* tweets = [NSMutableArray arrayWithCapacity:[entries count]];
   
   NSPredicate *imagePredicate = [NSPredicate predicateWithFormat:@"rel == %@", @"image"];
 
   for (NSDictionary* entry in entries) {
     TTTwitterTweet* tweet = [[TTTwitterTweet alloc] init];
     
-    NSDate* date = [dateFormatter dateFromString:[[entry objectForKey:@"published"]
-                                                  objectForXMLNode]];
+    NSDate* date = [dateFormatter dateFromString:[entry objectForKey:@"created_at"]];
     tweet.created = date;
     tweet.tweetId = [NSNumber numberWithLongLong:
-                     [[[entry objectForKey:@"id"] objectForXMLNode] longLongValue]];
-    tweet.text = [[entry objectForKey:@"title"] objectForXMLNode];
-    tweet.source = [[entry objectForKey:@"twitter:source"] objectForXMLNode];
+                     [[entry objectForKey:@"id"] longLongValue]];
+    tweet.text = [entry objectForKey:@"text"];
+    tweet.source = [entry objectForKey:@"source"];
     
     NSArray *links = [[entry objectForKey:@"link"] filteredArrayUsingPredicate:imagePredicate];
     tweet.imageUrl = [[links objectAtIndex:0] objectForKey:@"href"];
     
-    NSString *name = [[[entry objectForKey:@"author"] objectForKey:@"name"] objectForXMLNode];
+    NSString *name = [[entry objectForKey:@"author"] objectForKey:@"name"];
     tweet.username = [[name componentsSeparatedByString:@" "] objectAtIndex:0];
     
     [tweets addObject:tweet];
     TT_RELEASE_SAFELY(tweet);
   }
-  _tweets = tweets;
-  
+  _finished = tweets.count < _resultsPerPage;
+  [_tweets addObjectsFromArray: tweets];
+
   TT_RELEASE_SAFELY(dateFormatter);
 
   [super requestDidFinishLoad:request];

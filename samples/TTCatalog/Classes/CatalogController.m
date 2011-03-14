@@ -1,13 +1,12 @@
 #import "CatalogController.h"
-#import "Three20/developer.h"
 
 @implementation CatalogController
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // NSObject
 
-- (id)init {
-  if (self = [super init]) {
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+  if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
     self.title = @"Three20 Catalog";
     self.navigationItem.backBarButtonItem =
       [[[UIBarButtonItem alloc] initWithTitle:@"Catalog" style:UIBarButtonItemStyleBordered
@@ -41,16 +40,20 @@
     [TTTableTextItem itemWithText:@"Table Controls" URL:@"tt://tableControlsTest"],
     [TTTableTextItem itemWithText:@"Styled Labels in Table" URL:@"tt://styledTextTableTest"],
     [TTTableTextItem itemWithText:@"Web Images in Table" URL:@"tt://imageTest2"],
-  
+    [TTTableTextItem itemWithText:@"Table With Banner" URL:@"tt://tableWithBanner"],
+    [TTTableTextItem itemWithText:@"Table With Shadow" URL:@"tt://tableWithShadow"],
+    [TTTableTextItem itemWithText:@"Table With Drag Refresh" URL:@"tt://tableDragRefresh"],
+
     @"Models",
     [TTTableTextItem itemWithText:@"Model Search" URL:@"tt://searchTest"],
     [TTTableTextItem itemWithText:@"Model States" URL:@"tt://tableTest"],
-    
+
     @"General",
     [TTTableTextItem itemWithText:@"Web Image" URL:@"tt://imageTest1"],
     [TTTableTextItem itemWithText:@"YouTube Player" URL:@"tt://youTubeTest"],
     [TTTableTextItem itemWithText:@"Web Browser" URL:@"http://github.com/joehewitt/three20"],
     [TTTableTextItem itemWithText:@"Activity Labels" URL:@"tt://activityTest"],
+    [TTTableTextItem itemWithText:@"Download Progress" URL:@"tt://dlprogress"],
     [TTTableTextItem itemWithText:@"Scroll View" URL:@"tt://scrollViewTest"],
     [TTTableTextItem itemWithText:@"Launcher" URL:@"tt://launcherTest"],
     nil];

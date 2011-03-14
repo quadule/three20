@@ -69,7 +69,7 @@
 
 - (id)initWithAbout:(NSString*)about {
   if (self = [super init]) {
-    _contentType = ContentTypeNutrition;
+    _contentType = ContentTypeAbout;
     self.content = about;
     self.text = [NSString stringWithFormat:@"<b>%@</b> is the name of this page.  Exciting.", about];
 
@@ -102,17 +102,20 @@
 
 - (void)loadView {
   [super loadView];
-  
+
   CGRect frame = CGRectMake(10, 10, self.view.width-20, 100);
   TTStyledTextLabel* label = [[[TTStyledTextLabel alloc] initWithFrame:frame] autorelease];
   label.tag = 42;
   label.font = [UIFont systemFontOfSize:22];
   [self.view addSubview:label];
-  
+
   if (_contentType == ContentTypeNutrition) {
     self.view.backgroundColor = [UIColor grayColor];
     label.backgroundColor = self.view.backgroundColor;
     self.hidesBottomBarWhenPushed = YES;
+  } else if (_contentType == ContentTypeAbout) {
+	  self.view.backgroundColor = [UIColor grayColor];
+	  label.backgroundColor = self.view.backgroundColor;
   } else if (_contentType == ContentTypeOrder) {
     UIButton* button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button setTitle:@"What do you want to eat?" forState:UIControlStateNormal];
@@ -131,4 +134,3 @@
 }
 
 @end
- 

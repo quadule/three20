@@ -6,8 +6,8 @@
 //  Copyright 2010 Art Market Tools. All rights reserved.
 //
 
-#import "Three20/TTStyleSheet.h"  
-#import "Three20/TTDefaultStyleSheet.h"
+#import "Three20Style/TTStyleSheet.h"
+#import "Three20Style/TTDefaultStyleSheet.h"
 
 @interface ArtexpoStylesheet : TTDefaultStyleSheet {
 

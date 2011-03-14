@@ -1,5 +1,5 @@
 //
-// Copyright 2009-2010 Facebook
+// Copyright 2009-2011 Facebook
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,15 @@
 // limitations under the License.
 //
 
+#import <Three20UI/Three20UI.h>
+
 #import "TTTwitterSearchFeedDataSource.h"
 
 #import "TTTwitterSearchFeedModel.h"
 #import "TTTwitterTweet.h"
+
+// Three20 Additions
+#import <Three20Core/NSDateAdditions.h>
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -102,9 +107,15 @@
     NSString *link = [NSString stringWithFormat:@"<a href='%@'>%@</a>", url, tweet.username];
     
     TTStyledText* styledText = [TTStyledText textFromXHTML:
-                                [NSString stringWithFormat:@"<b>%@</b><br />%@", link,
-                                 [tweet.text stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]]
-                               lineBreaks:YES URLs:YES];
+                                [NSString stringWithFormat:@"%@\n<b>%@</b>",
+                                 [[tweet.text stringByReplacingOccurrencesOfString:@"&"
+                                                                        withString:@"&amp;"]
+                                  stringByReplacingOccurrencesOfString:@"<"
+                                  withString:@"&lt;"],
+                                 [tweet.created formatRelativeTime]]
+                                                lineBreaks:YES URLs:YES];
+    // If this asserts, it's likely that the tweet.text contains an HTML character that caused
+    // the XML parser to fail.
     TTDASSERT(nil != styledText);
     
     TTTableStyledMessageItem *item = [TTTableStyledMessageItem itemWithText:styledText];
@@ -113,9 +124,14 @@
     [items addObject:item];
   }
   
+  
+  if (!_searchFeedModel.finished) {
+    [items addObject:[TTTableMoreButton itemWithText:@"more…"]];
+  }
+
   NSMutableArray *twitterItems = [self.items objectAtIndex:2];
   [twitterItems addObjectsFromArray:items];
-  
+    
   TT_RELEASE_SAFELY(items);
 }
 
