@@ -17,6 +17,7 @@
 #import "Three20Style/UIFontAdditions.h"
 
 #import "Three20UI/UIViewAdditions.h"
+#import "Three20Core/NSDateAdditions.h"
 
 // Core
 #import "Three20Core/TTCorePreprocessorMacros.h"
@@ -51,7 +52,7 @@ static const CGFloat kMargin                    = 10;
 // NSObject
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)identifier {
-	if (self = [super initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:identifier]) {
+	if ((self = [super initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:identifier])) {
 		_titleLabel = nil;
 		_timestampLabel = nil;
 		_imageView2 = nil;
@@ -108,7 +109,7 @@ static const CGFloat kMargin                    = 10;
 		[_timestampLabel sizeToFit];
         _timestampLabel.left = self.contentView.width - (_timestampLabel.width + kTableCellSmallMargin);
 		_timestampLabel.top = top;
-        _timestampLabel.width -= _timestampLabel.width + kTableCellSmallMargin*2;
+        //_timestampLabel.width -= _titleLabel.width + kTableCellSmallMargin*2;
 
 	} else {
 		_titleLabel.frame = CGRectZero;
@@ -132,7 +133,10 @@ static const CGFloat kMargin                    = 10;
 
 	if ([self.detailedTextLabel text] != nil) {
 		//CGFloat textHeight = [[self.detailedTextLabel font] ttLineHeight] * (kMessageTextLineCount + (self.captionLabel.text.length ? 0 : 1));
-		self.detailedTextLabel.frame = CGRectMake(left, top, width, self.detailedTextLabel.text.height);
+		//self.detailedTextLabel.frame = CGRectMake(left, top, width, self.detailedTextLabel.text.height);
+        [_detailedTextLabel sizeToFit];
+        _detailedTextLabel.left = left;
+        _detailedTextLabel.top = top;
 
 	} else {
 		self.detailedTextLabel.frame = CGRectZero;
@@ -155,7 +159,7 @@ static const CGFloat kMargin                    = 10;
 - (void)setObject:(id)object {
 	if (_item != object) {
 		[super setObject:object];
-		
+
 		TTTableStyledMessageItem* item = object;
 		if (item.title.length) {
 			self.titleLabel.text = item.title;
