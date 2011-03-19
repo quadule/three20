@@ -23,11 +23,13 @@
   NSString* _imageURL;
   UIImage*  _defaultImage;
   TTStyle*  _imageStyle;
+  NSInteger _imageMargin;
 }
 
 @property (nonatomic, copy)   NSString* imageURL;
 @property (nonatomic, retain) UIImage*  defaultImage;
 @property (nonatomic, retain) TTStyle*  imageStyle;
+@property (nonatomic, assign) NSInteger imageMargin;
 
 + (id)itemWithText:(NSString*)text imageURL:(NSString*)imageURL;
 + (id)itemWithText:(NSString*)text imageURL:(NSString*)imageURL URL:(NSString*)URL;

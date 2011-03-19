@@ -92,7 +92,7 @@ static const UILineBreakMode kLineBreakMode = UILineBreakModeWordWrap;
     size.height = kMaxLabelHeight;
   }
 
-  return size.height + kTableCellVPadding*2;
+  return size.height;// + kTableCellVPadding*2;
 }
 
 

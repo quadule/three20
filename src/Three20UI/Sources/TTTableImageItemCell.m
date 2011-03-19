@@ -119,7 +119,7 @@ static const CGFloat kDefaultImageSize = 50;
                                    lineBreakMode:UILineBreakModeTailTruncation];
 
   CGFloat contentHeight = textSize.height > imageHeight ? textSize.height : imageHeight;
-  return contentHeight + kTableCellVPadding*2;
+  return contentHeight + imageItem.imageMargin*2;
 }
 
 
@@ -186,7 +186,7 @@ static const CGFloat kDefaultImageSize = 50;
         }
       }
 
-      _imageView2.frame = CGRectMake(kTableCellHPadding, floor(self.height/2 - iconHeight/2),
+      _imageView2.frame = CGRectMake(item.imageMargin, floor(self.height/2 - iconHeight/2),
                                      iconWidth, iconHeight);
 
       CGFloat innerWidth = self.contentView.width - (kTableCellHPadding*2
